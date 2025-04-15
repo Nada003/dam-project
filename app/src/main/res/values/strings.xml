@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Boumerdes Tourism</string>
+
+    <!-- Hero Section -->
+    <string name="boumerdes">Boumerdes</string>
+    <string name="discover_mediterranean_pearl">Découvrez la perle de la Méditerranée</string>
+    <string name="hero_image_description">Vue panoramique de Boumerdes</string>
+
+    <!-- Main Page -->
+    <string name="must_see">À Ne Pas Manquer</string>
+    <string name="bouzegza">La Forêt de Bouzegza</string>
+    <string name="bouzegza_boumerdes">Explorez la forêt de Bouzegza et rencontrez ses célèbres singes en liberté. Un coin paisible et naturel, parfait pour une balade ressourçante.</string>
+    <string name="bouzegza_image_description">Image des singes de bouzegza</string>
+    <string name="discover">Découvrir</string>
+
+    <!-- Features Page -->
+    <string name="discover_boumerdes">Découvrez Boumerdes</string>
+    <string name="beaches">Plages Magnifiques</string>
+    <string name="beaches_description">Profitez de nos plages de sable doré et des eaux cristallines de la Méditerranée.</string>
+    <string name="restaurants">Nos Restaurants</string>
+    <string name="restaurants_description">Découvrez les saveurs authentiques de la cuisine traditionnelle.</string>
+    <string name="hotels">Nos Hôtels</string>
+    <string name="hotels_description">Découvrez nos hébergements luxueux en bord de mer.</string>
+    <string name="leisure">Nos Loisirs</string>
+    <string name="leisure_description">Explorez les nombreuses activités et divertissements disponibles à Boumerdes.</string>
+    <string name="discover_leisure">Découvrez nos activités de loisirs</string>
+    <string name="activities">Activités:</string>
+
+    <!-- Dialogs -->
+    <string name="contact_information">Informations de contact</string>
+    <string name="close_dialog">Fermer</string>
+    <string name="discover_restaurants">Découvrez nos restaurants</string>
+    <string name="discover_hotels">Découvrez nos hôtels</string>
+    <string name="discover_beaches">Découvrez nos plages</string>
+    <string name="place_image_description">Image du lieu</string>
+    <string name="specialty">Spécialité:</string>
+    <string name="amenities">Services:</string>
+</resources>
