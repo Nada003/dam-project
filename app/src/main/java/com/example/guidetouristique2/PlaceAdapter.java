@@ -1,6 +1,8 @@
 package com.example.guidetouristique2;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +12,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.guidetouristique2.LocationData;
-import com.example.guidetouristique2.R;
 
 import java.util.List;
 
@@ -40,16 +39,10 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
     public void onBindViewHolder(@NonNull PlaceViewHolder holder, int position) {
         LocationData.Place place = places.get(position);
 
-        // Set image using setImageResource for local images
-        holder.placeImage.setImageResource(R.drawable.placeholder_image); // or use setImageURI for URI-based images
-
-        // Set place name
+        holder.placeImage.setImageResource(place.getImageResId() != 0 ? place.getImageResId() : R.drawable.placeholder_image);
         holder.placeName.setText(place.getName());
-
-        // Set place description
         holder.placeDescription.setText(place.getDescription());
 
-        // Handle rating
         if (place.hasRating()) {
             holder.ratingContainer.setVisibility(View.VISIBLE);
             holder.placeRating.setText(String.valueOf(place.getRating()));
@@ -57,40 +50,40 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
             holder.ratingContainer.setVisibility(View.GONE);
         }
 
-        // Set specialty or amenities label based on location type
         if (locationType.equals("restaurants")) {
             holder.placeSpecialtyLabel.setText(context.getString(R.string.specialty));
-            holder.placeSpecialty.setText(place.getSpeciality());
         } else if (locationType.equals("hotels")) {
             holder.placeSpecialtyLabel.setText(context.getString(R.string.amenities));
-            holder.placeSpecialty.setText(place.getSpeciality());
         } else if (locationType.equals("leisure")) {
             holder.placeSpecialtyLabel.setText(context.getString(R.string.activities));
-            holder.placeSpecialty.setText(place.getSpeciality());
         }
+        holder.placeSpecialty.setText(place.getSpeciality());
 
-        // Set address if available
-        if (place.getAddress() != null && !place.getAddress().isEmpty()) {
-            holder.placeAddress.setText(place.getAddress());
-            holder.placeAddress.setVisibility(View.VISIBLE);
-        } else {
-            holder.placeAddress.setVisibility(View.GONE);
-        }
+        holder.placeAddress.setText(place.getAddress());
+        holder.placeAddress.setVisibility(place.getAddress().isEmpty() ? View.GONE : View.VISIBLE);
 
-        // Set contact information
-        if (place.getContact() != null && !place.getContact().isEmpty()) {
-            holder.placePhone.setText(place.getContact());
-            holder.placePhone.setVisibility(View.VISIBLE);
-        } else {
-            holder.placePhone.setVisibility(View.GONE);
-        }
+        holder.placePhone.setText(place.getContact());
+        holder.placePhone.setVisibility(place.getContact().isEmpty() ? View.GONE : View.VISIBLE);
 
-        if (place.getEmail() != null && !place.getEmail().isEmpty()) {
-            holder.placeEmail.setText(place.getEmail());
-            holder.placeEmail.setVisibility(View.VISIBLE);
-        } else {
-            holder.placeEmail.setVisibility(View.GONE);
-        }
+        holder.placeEmail.setText(place.getEmail());
+        holder.placeEmail.setVisibility(place.getEmail().isEmpty() ? View.GONE : View.VISIBLE);
+
+        // 📞 Clic sur le numéro pour ouvrir le composeur
+        holder.placePhone.setOnClickListener(v -> {
+            String phoneNumber = place.getContact();
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + phoneNumber));
+            context.startActivity(intent);
+        });
+
+        // 📧 Clic sur l'email pour ouvrir Gmail
+        holder.placeEmail.setOnClickListener(v -> {
+            String email = place.getEmail();
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:" + email));
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Contact via Guide Touristique");
+            context.startActivity(intent);
+        });
     }
 
     @Override

@@ -15,9 +15,9 @@ import java.util.List;
 
 public class FeatureAdapter extends RecyclerView.Adapter<FeatureAdapter.FeatureViewHolder> {
 
-    private List<Feature> features;
-    private Context context;
-    private OnFeatureClickListener listener;
+    private final List<Feature> features;
+    private final LayoutInflater inflater;
+    private final OnFeatureClickListener listener;
 
     public interface OnFeatureClickListener {
         void onInfoButtonClick(String featureType);
@@ -25,16 +25,15 @@ public class FeatureAdapter extends RecyclerView.Adapter<FeatureAdapter.FeatureV
     }
 
     public FeatureAdapter(Context context, List<Feature> features, OnFeatureClickListener listener) {
-        this.context = context;
         this.features = features;
+        this.inflater = LayoutInflater.from(context);
         this.listener = listener;
     }
 
     @NonNull
     @Override
     public FeatureViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_feature_card, parent, false);
+        View view = inflater.inflate(R.layout.item_feature_card, parent, false);
         return new FeatureViewHolder(view);
     }
 
@@ -42,15 +41,10 @@ public class FeatureAdapter extends RecyclerView.Adapter<FeatureAdapter.FeatureV
     public void onBindViewHolder(@NonNull FeatureViewHolder holder, int position) {
         Feature feature = features.get(position);
 
-        // Set image using setImageResource
-        holder.featureImage.setImageResource(feature.getImageResId());
-
-        // Set feature title and description
+        holder.featureImage.setImageResource(feature.getImageResId() != 0 ? feature.getImageResId() : R.drawable.placeholder_image);
         holder.featureTitle.setText(feature.getTitle());
         holder.featureDescription.setText(feature.getDescription());
 
-
-        // Set click listeners
         final String featureType = feature.getType();
 
         holder.featureButton.setOnClickListener(v -> {
@@ -86,12 +80,11 @@ public class FeatureAdapter extends RecyclerView.Adapter<FeatureAdapter.FeatureV
         }
     }
 
-    // Feature model class
     public static class Feature {
-        private String title;
-        private String description;
-        private int imageResId;
-        private String type;
+        private final String title;
+        private final String description;
+        private final int imageResId;
+        private final String type;
 
         public Feature(String title, String description, int imageResId, String type) {
             this.title = title;

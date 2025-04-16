@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="4dp">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +17,7 @@
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:contentDescription="@string/place_image_description"
-            tools:src="@drawable/restaurant" />
+            android:src="@drawable/placeholder_image" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,19 +45,14 @@
                     android:id="@+id/rating_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#F9F9F9"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingTop="6dp"
-                    android:paddingBottom="6dp"
                     android:orientation="horizontal"
+                    android:padding="6dp"
+                    android:background="#F9F9F9"
                     android:gravity="center_vertical"
-                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:radius="15dp">
+                    android:layout_marginBottom="4dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -174,4 +167,4 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</androidx.core.widget.NestedScrollView>
