@@ -16,7 +16,7 @@ public class Language {
     // Get the saved language from SharedPreferences
     public static String getLanguage(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("Settings", Context.MODE_PRIVATE);
-        String language = prefs.getString("Language", "fr"); // Default is French
+        String language = prefs.getString("Language", "en"); // Default is English
         Log.d(TAG, "getLanguage: Current language is " + language); // Log current language
         return language;
     }
@@ -44,4 +44,6 @@ public class Language {
         Log.d(TAG, "setLocale: Language set to " + langCode); // Log language set
         return new ContextWrapper(context);
     }
+
+
 }

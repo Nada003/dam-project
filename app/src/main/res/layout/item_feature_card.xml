@@ -55,7 +55,6 @@
             android:paddingEnd="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textColor="@android:color/white"
-            tools:text="Plus d'informations" />
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

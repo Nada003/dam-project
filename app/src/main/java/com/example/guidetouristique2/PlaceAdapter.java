@@ -26,8 +26,9 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
         this.places = places;
         this.locationType = locationType;
     }
-
     @NonNull
+
+
     @Override
     public PlaceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -68,7 +69,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
         holder.placeEmail.setText(place.getEmail());
         holder.placeEmail.setVisibility(place.getEmail().isEmpty() ? View.GONE : View.VISIBLE);
 
-        // 📞 Clic sur le numéro pour ouvrir le composeur
+        //  Clic sur le numéro pour ouvrir le composeur
         holder.placePhone.setOnClickListener(v -> {
             String phoneNumber = place.getContact();
             Intent intent = new Intent(Intent.ACTION_DIAL);
@@ -76,7 +77,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
             context.startActivity(intent);
         });
 
-        // 📧 Clic sur l'email pour ouvrir Gmail
+        // Clic sur l'email pour ouvrir Gmail
         holder.placeEmail.setOnClickListener(v -> {
             String email = place.getEmail();
             Intent intent = new Intent(Intent.ACTION_SENDTO);

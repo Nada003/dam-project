@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Boumerdes Tourist Guide</string>
 
     <!-- Main Section -->
@@ -83,4 +83,6 @@
 
     <string name="leisure2_speciality">Gardens</string>
     <string name="leisure2_address">Corso Forest, Boumerdes</string>
+
+
 </resources>

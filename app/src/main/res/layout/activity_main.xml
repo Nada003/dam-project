@@ -26,7 +26,7 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/boumerdes" />
 
-                <!-- Language Toggle Toolbar -->
+                <!-- Language-->
                 <LinearLayout
                     android:id="@+id/language_toggle"
                     android:layout_width="wrap_content"
@@ -42,21 +42,23 @@
                     android:clipChildren="false">
 
                     <Button
-                        android:id="@+id/btn_fr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/language_button"
-                        android:minWidth="60dp"
-                        android:text="@string/fr"
-                        android:textStyle="bold" />
-
-                    <Button
                         android:id="@+id/btn_en"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/language_button"
+
                         android:minWidth="60dp"
                         android:text="@string/en"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:minWidth="60dp"
+                        android:text="@string/fr"
+                        android:textColor="#000000"
                         android:textStyle="bold" />
                 </LinearLayout>
 

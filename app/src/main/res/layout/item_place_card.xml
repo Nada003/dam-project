@@ -162,8 +162,7 @@
                     android:drawableStart="@android:drawable/ic_dialog_email"
                     android:drawablePadding="8dp"
                     android:textSize="14sp"
-                    android:textColor="#0288D1"
-                    tools:text="lerivage@resto-boumerdes.dz" />
+                    android:textColor="#0288D1" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

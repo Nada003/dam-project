@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">guide touristique de boumerdes</string>
+    <!-- Main Section -->
+    <string name="boumerdes">Boumerdes</string>
+    <string name="discover_mediterranean_pearl">Découvrez la perle de la Méditerranée</string>
+    <string name="hero_image_description">Vue panoramique de Boumerdes</string>
+    <string name="fr">FR</string>
+    <string name="en">EN</string>
+
+    <!-- Main Page -->
+    <string name="must_see">À Ne Pas Manquer</string>
+    <string name="bouzegza">La Forêt de Bouzegza</string>
+    <string name="bouzegza_boumerdes">Explorez la forêt de Bouzegza et rencontrez ses célèbres singes en liberté. Un coin paisible et naturel, parfait pour une balade ressourçante.</string>
+    <string name="bouzegza_image_description">Image des singes de bouzegza</string>
+    <string name="discover">Découvrir</string>
+
+    <!-- Features Page -->
+    <string name="discover_boumerdes">Découvrez Boumerdes</string>
+    <string name="beaches">Nos Plages</string>
+    <string name="beaches_description">Profitez de nos plages de sable doré et des eaux cristallines de la Méditerranée.</string>
+    <string name="restaurants">Nos Restaurants</string>
+    <string name="restaurants_description">Découvrez les saveurs authentiques de la cuisine traditionnelle.</string>
+    <string name="hotels">Nos Hôtels</string>
+    <string name="hotels_description">Découvrez nos hébergements en bord de mer.</string>
+    <string name="leisure">Nos Loisirs</string>
+    <string name="leisure_description">Explorez les nombreuses activités et divertissements disponibles à Boumerdes.</string>
+    <string name="discover_leisure">Découvrez nos activités de loisirs</string>
+    <string name="activities">Activités:</string>
+
+    <!-- Dialogs -->
+    <string name="contact_information">Informations de contact</string>
+    <string name="close_dialog">Fermer</string>
+    <string name="discover_restaurants">Découvrez nos restaurants</string>
+    <string name="discover_hotels">Découvrez nos hôtels</string>
+    <string name="discover_beaches">Découvrez nos plages</string>
+    <string name="place_image_description">Image du lieu</string>
+    <string name="specialty">Spécialité:</string>
+    <string name="amenities">Services:</string>
+
+    <!-- Plages -->
+    <string name="beach1_name">Plage Corso</string>
+    <string name="beach1_description">Plage de sable doré, eaux calmes, idéale pour familles et détente.</string>
+    <string name="beach1_speciality">Plage de sable</string>
+    <string name="beach1_address">Commune de Corso, wilaya de Boumerdès, Algérie</string>
+
+    <string name="beach2_name">Plage du Complexe Touristique Le Grand Bleu</string>
+    <string name="beach2_description">Une destination prisée, elle se distingue par son accès contrôlé</string>
+    <string name="beach2_speciality">Eaux claires et plage sécuritée</string>
+    <string name="beach2_address">Zemmouri, Boumerdès, Algérie</string>
+
+    <!-- Restaurants -->
+    <string name="restaurant1_name">Restaurant Woodpecker</string>
+    <string name="restaurant1_description">Ambiance chaleureuse et déco moderne, idéal pour une sortie en famille ou entre amis.</string>
+    <string name="restaurant1_speciality"> Cuisine italienne – pizzas au feu de bois, pâtes, burgers gourmets.</string>
+    <string name="restaurant1_address">Résidence Zidane, Boulevard des Martyrs, Boumerdès</string>
+
+    <string name="restaurant2_name">Restaurant Lkanoun</string>
+    <string name="restaurant2_description">Ce restaurant offre une cuisine variée dans un cadre convivial. </string>
+    <string name="restaurant2_speciality">Cuisine locale</string>
+    <string name="restaurant2_address">Rocher Noir Plage, Boumerdès</string>
+
+    <!-- Hôtels -->
+    <string name="hotel1_name"> BOUMERDES PLAZA Hôtel et Spa</string>
+    <string name="hotel1_description"> Un hôtel haut de gamme offrant confort et relaxation avec vue sur la mer.</string>
+    <string name="hotel1_speciality">Hôtel de luxe avec spa, piscine extérieure et restaurant gastronomique.</string>
+    <string name="hotel1_address">Boulevard du Front de Mer, Boumerdès </string>
+
+    <string name="hotel2_name"> Hôtel Albatros Beach</string>
+    <string name="hotel2_description"> Parfait pour les amateurs de plage, offrant un cadre paisible et une vue imprenable.</string>
+    <string name="hotel2_speciality">  Hôtel en bord de mer avec piscine et vue panoramique.</string>
+    <string name="hotel2_address">Boumerdès, Algérie</string>
+
+    <!-- Loisirs -->
+    <string name="leisure1_name"> Centre Équestre Le Grand Bleu</string>
+    <string name="leisure1_description">Situé au sein du complexe touristique Le Grand Bleu, offrant un environnement naturel varié avec plage, forêt et dunes.</string>
+    <string name="leisure1_speciality">  Cours d\'équitation pour tous les âges et niveaux, encadrés par des moniteurs qualifiés.</string>
+    <string name="leisure1_address">Boumerdès, Algérie</string>
+
+    <string name="leisure2_name">La Forêt de Corso</string>
+    <string name="leisure2_description">un have de paix idéal pour les balades en familles.</string>
+
+    <string name="leisure2_speciality">Jardins</string>
+    <string name="leisure2_address">Forêt de Corso, Boumerdès</string>
+</resources>
